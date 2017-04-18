@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">WordCounter</string>
     <string name="enter_prompt">Enter text here!</string>
-    <string name="button_for_count">Show Word Count!</string>
+    <string name="button_for_count">Show Uniq Word Count!</string>
 </resources>

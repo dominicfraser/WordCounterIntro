@@ -1,5 +1,6 @@
 package example.codeclan.com.wordcounter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -29,15 +30,15 @@ public class LaunchActivity extends AppCompatActivity {
 
 
     public void onWordsEntered(View text){
-        Log.d(getClass().toString(), "show count button pressed");
+        Log.d(getClass().toString(), "show uniq count button pressed");
 
         String words = enteredWords.getText().toString();
 
-        Word all_words = new Word(words);
+        Intent intent = new Intent(this,UniqWordsDisplayActivity.class);
 
-        String countOfWords = String.valueOf(all_words.amountOfWords());
+        intent.putExtra("words",words);
 
-        count.setText(countOfWords);
+        startActivity(intent);
     }
 
         private TextWatcher textWatcher = new TextWatcher() {
