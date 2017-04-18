@@ -23,7 +23,7 @@ public class LaunchActivity extends AppCompatActivity {
         enteredWords = (EditText) findViewById(R.id.enter_all_text);
         count = (TextView) findViewById(R.id.amount_of_words);
 
-//        enteredWords.addTextChangedListener(textWatcher);
+        enteredWords.addTextChangedListener(textWatcher);
 
     }
 
@@ -40,23 +40,24 @@ public class LaunchActivity extends AppCompatActivity {
         count.setText(countOfWords);
     }
 
-    //    private TextWatcher textWatcher = new TextWatcher() {
-//        @Override
-//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//        }
-//
-//        @Override
-//        public void onTextChanged(CharSequence s, int start, int before, int count) {
-//        String words = enteredWords.getText().toString();
-//        Word all_words = new Word(words);
-//        int count_of_words = all_words.amountOfWords();
-//        count.setText(count_of_words);
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//
-//        }
-//    }
+        private TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String words = enteredWords.getText().toString();
+                Word all_words = new Word(words);
+                String countOfWords = String.valueOf(all_words.amountOfWords());
+                count.setText(countOfWords);
+            }
+        };
+
 }
