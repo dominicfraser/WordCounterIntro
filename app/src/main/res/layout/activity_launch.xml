@@ -7,6 +7,7 @@
     tools:context="example.codeclan.com.wordcounter.LaunchActivity">
 
     <EditText
+
         android:id="@+id/enter_all_text"
         android:hint="@string/enter_prompt"
         android:textSize="20sp"
@@ -16,15 +17,24 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:onClick="onWordsEntered"
+        android:id="@+id/on_show_count"
+        android:text="@string/button_for_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/amount_of_words"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="91dp" />
+
     <TextView
         android:id="@+id/amount_of_words"
         android:textSize="50sp"
         android:text="/Count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enter_all_text"
-        android:layout_alignLeft="@+id/enter_all_text"
-        android:layout_alignStart="@+id/enter_all_text"
-        android:layout_marginTop="113dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp" />
 
 </RelativeLayout>
