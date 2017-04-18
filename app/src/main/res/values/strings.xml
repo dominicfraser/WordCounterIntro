@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WordCounter</string>
+    <string name="enter_prompt">Enter text here!</string>
 </resources>
