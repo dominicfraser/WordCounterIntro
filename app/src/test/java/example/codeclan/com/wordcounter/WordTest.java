@@ -25,4 +25,9 @@ public class WordTest {
         assertEquals( splitWordsHard.length, splitWordsMethod.length );
         assertEquals(3, splitWordsHard.length);
     }
+
+    @Test
+    public void canCountWords(){
+        assertEquals(3, words.amountOfWords());
+    }
 }
